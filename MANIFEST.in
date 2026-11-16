@@ -1,0 +1,4 @@
+include LICENSE README.rst
+recursive-include docs *.rst
+recursive-include examples/MeOOH *.yaml *.xyz *.py *.rst
+recursive-include tests *.py *.json

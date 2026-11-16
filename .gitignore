@@ -1,0 +1,27 @@
+# Python and build products.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+
+# Electronic calculations and generated ensembles.
+*.out
+*.out.*
+*.log
+*.npz
+*.sqlite*
+*.h5
+*.RasOrb
+*.JobIph
+*.JobMix
+examples/**/generated/
+examples/**/qchem_scan/
+examples/**/relaxed_rotor_scan/
+examples/**/relaxed_torsion_minima/
+examples/**/*filelist.txt
+examples/**/opt.in
+examples/**/freq.in

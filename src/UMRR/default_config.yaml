@@ -1,0 +1,37 @@
+# Defaults for the independent-mode UM-RR calculation.
+# All paths are relative to the directory containing this file.
+paths:
+  freq_output: freq.out
+  scan_dir: qchem_scan
+  output_dir: generated
+sampling:
+  coordinate_system: internal
+  num_samples: 10000
+  temperature_kelvin: 298.0
+  random_seed: null
+internal_coordinates:
+  model: minima
+  coordinate_construction: direct
+  basin_interpolation: hard
+  scan_extension_factor: 1.35
+  scan_max_extensions: 8
+  scan_max_harmonic_energy_factor: 4.0
+  scan_nonrotor_dihedral_limit_deg: 150.0
+  boundary_probability_tolerance: 0.001
+pes:
+  num_scan_points: 25
+  scan_energy_range_hartree: 0.3
+schrodinger:
+  grid_points: 5000
+  num_states: 20
+relaxed_torsion:
+  enabled: false
+  sample: false
+qchem:
+  num_processors: 8
+  run_jobs: false
+  command_template: "qchem -nt 1 {input} {output}"
+output:
+  write_spline_plots: false
+  write_relaxed_torsion_plots: false
+  write_normal_mode_wavefunction_plots: false
